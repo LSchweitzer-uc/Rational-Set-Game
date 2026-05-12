@@ -1,0 +1,66 @@
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+/* Group sections */
+.controls, .stats, .actions {
+  margin: 15px 0;
+}
+
+/* Layout controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Numbers grid */
+#numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+/* Number buttons */
+#numbers button {
+  min-width: 60px;
+  font-size: 18px;
+}
+
+/* General button styling */
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Selected numbers */
+.selected {
+  background-color: lightblue;
+}
+
+/* Make primary action stand out */
+#submitBtn {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.action-btn.orange {
+  background-color: #f0ad4e;
+  color: white;
+}
