@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rational Set</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Rational Set</h1>
+
+  <p>Select sets of 3+ rational numbers that add up to 0 or multiply to -1. Scoring is for timed games and high score takes into account difficulty</p>
+
+  <div class="controls">
+  <button onclick="startGame()">Start Game</button>
+  <button onclick="stopGame()">Stop Game</button>
+
+  <div class="difficulty">
+    <label for="diffInput">Difficulty:</label>
+    <input id="diffInput" type="number" value="10" min="1" max="5000000">
+  </div>
+  </div>
+  
+  <div class="stats">
+    <p>Time Remaining: <span id="time">120</span>s</p>
+    <p>Score: <span id="score">0</span></p>
+    <p>Timed High Score: <span id="highScore">0</span></p>
+  </div>
+  
+  <p id="setStatus"></p>
+  
+  <div id="numbers"></div>
+  
+  <div class="actions">
+    <button id="submitBtn">Submit Set</button>
+<button class="action-btn orange" onclick="handleDrawCard()">Draw Card</button>
+<button class="action-btn orange" onclick="showHint()">Hint</button>
+  </div>
+  
+  <p id="result"></p>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
