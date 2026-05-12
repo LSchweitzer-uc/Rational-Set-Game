@@ -6,7 +6,7 @@ let timeLeft = 120;
 let diff = 10
 let timerInterval = null;
 let gameActive = false;
-let highScore = localStorage.getItem("highScore") || 0;
+let highScore = localStorage.getItem("rationalSetHighScore") || 0;
 
 function startGame() {
   score = 0;
@@ -45,12 +45,12 @@ function endGame() {
 
   document.getElementById("result").innerText = "⏰ Game over! Final score: " + score;
 
-  let highScore = localStorage.getItem("highScore") || 0;
+  let highScore = localStorage.getItem("rationalSetHighScore") || 0;
 
   let modifiedScore = score*diff
 
   if (modifiedScore > highScore) {
-    localStorage.setItem("highScore", modifiedScore);
+    localStorage.setItem("RationalSetHighScore", modifiedScore);
     highScore = modifiedScore;
   }
 
@@ -458,5 +458,5 @@ diffInput.addEventListener("keydown", function (event) {
     updateSetStatus();
   }
 });
-let savedHigh = localStorage.getItem("highScore") || 0;
-document.getElementById("highScore").innerText = savedHigh;
+let savedHigh = localStorage.getItem("rationalSetHighScore") || 0;
+document.getElementById("rationalSetHighScore").innerText = savedHigh;
